@@ -50,6 +50,7 @@ class UserNetListView(generics.ListAPIView):
 #     queryset = UserNet.objects.all()
 
 class UserNetDetailView(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
     def get(self, request, pk):
         filters = {}
         filters['user'] = UserNet.objects.get(id=pk)
@@ -68,7 +69,6 @@ class PostNetListView(generics.ListAPIView):
     permission_classes = (permissions.IsAuthenticated,)
     serializer_class = PostNetDetailSerializer
     pagination_class = PostAPIListPagination
-    permission_classes = (permissions.IsAuthenticated,)
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_fields = ('author', )
 
@@ -98,7 +98,7 @@ class PostNetUpdateView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (permissions.IsAuthenticated, IsAuthorOrReadOnly)
 
 class PostImagesListAPIView(APIView):
-
+    permission_classes = (permissions.IsAuthenticated,)
     def get(self, request, pk):
         filters = {}
         filters['post'] = PostNet.objects.get(id=pk)
