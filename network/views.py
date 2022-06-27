@@ -75,6 +75,22 @@ class PostNetListView(generics.ListAPIView):
     def get_queryset(self):
         posts = PostNet.objects.all()
         return posts
+# class PostNetListView(APIView):
+#     permission_classes = (permissions.IsAuthenticated,)
+#     pagination_class = PostAPIListPagination
+#     filter_backends = (filters.DjangoFilterBackend,)
+#     filterset_fields = ('author', )
+#     def get(self, request):
+#         filter = {}
+#         filter['post'] = PostNet.objects.all()
+#         try:
+#             filter['images'] = PostImages.objects.all()
+#             serializer = PostUpdateOneSerializer(filter)
+#             return serializer.data
+#         except MultipleObjectsReturned:
+#             filter['images'] = PostImages.objects.all()
+#             serializer = PostUpdateManySerializer(filter)
+#             return serializer.data
 
 class PostCreateAPIView(generics.CreateAPIView):
     queryset = PostNet.objects.all()
