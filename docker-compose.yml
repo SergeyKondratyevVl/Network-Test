@@ -13,7 +13,7 @@ services:
       - "8000:8000"
   nginx:
     build: ./nginx
-    container_name: sound_cloud_nginx
+    container_name: network_nginx
     restart: on-failure
     ports:
       - 80:80
