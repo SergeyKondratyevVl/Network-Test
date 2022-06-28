@@ -10,5 +10,5 @@ RUN pip install --upgrade pip
 COPY ./req.txt /code/
 
 RUN pip install -r req.txt
-EXPOSE 8000
+
 COPY . /code/
