@@ -2,12 +2,23 @@ version: "3.9"
 services:
   web:
     build: ./
-    container_name: network
+    container_name: network_web
     restart: always
     command: bash entrypoint.sh
     volumes:
       - .:/usr/src/app
-      # - ./static: /usr/src/app/static
-      # - ./media: /usr/src/app/media
+      - ./static:/usr/src/app/static
+      - ./media:/usr/src/app/media
     ports:
       - "8000:8000"
+  nginx:
+    build: ./nginx
+    container_name: sound_cloud_nginx
+    restart: on-failure
+    ports:
+      - 80:80
+    volumes:
+      - ./static:/static
+      - ./media:/media
+    depends_on:
+      - web
