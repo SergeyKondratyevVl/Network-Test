@@ -1,14 +1,4 @@
 # TestTask
-<!-- 1. admin/ - вход в админ-панель, 
-2. api/login/ - авторизация пользователя
-3. api/register/ - регистрация нового пользователя
-4. api/user/ - демонстрация всех пользователей, права доступа -
-5. api/user/<<int:pk>>/ - демонстрация пользователя и его постов, права доступа - 
-6. api/user/post-create/ - создание поста данным пользователем, права доступа - 
-7. api/posts/ - демонстрация всех постов, права доступа - 
-8. api/posts/<<int:pk>>/ - демонстрация конкретного поста, права доступа - 
-9. api/posts/<<int:pk>>/update/ - редактирование поста, права доступа - 
-10. api/posts/<<int:pk>>/images/ - просмотр добавленных изображений к конкретному посту, права доступа -  -->
 
 ## Таблица запросов
 | URL | Функция | Права доступа |
@@ -28,8 +18,27 @@ _____
 2. Уникальный адрес электронной почты.
 3. Размер загружаемых изображений не более 5 Мбайт.
 4. Описание к добавляемому изображению обязательно.
-5. Пагнация только для просмотра списка всех постов
+5. Пагнация для просмотра списка всех постов или пользователей
 6. Имеется фильтрация статей по автору постов
 7. В админ-панели есть возможность большей настройки постов с помощью библиотеки ckeditor.
 ____
 Имеется уже созданный суперпользователь с email: root@mail.ru, password: 1234. 
+______
+## Примеры использования страниц
+![Alt-api/login/](https://user-images.githubusercontent.com/89204620/176139560-1a8cb15a-57ca-46db-b9f9-04154005a804.png)
+___
+![image](https://user-images.githubusercontent.com/89204620/176140447-386ac3fa-8b70-49d5-ae86-967250fa794b.png)
+______
+![image](https://user-images.githubusercontent.com/89204620/176140587-81cfb8c2-5218-40de-8acd-9fc262c23bbf.png)
+______
+![image](https://user-images.githubusercontent.com/89204620/176140674-ca937573-84da-4bd7-8bec-cc2bcd832ea5.png)
+______
+![image](https://user-images.githubusercontent.com/89204620/176140774-34fee5f2-4b50-4450-a3a5-c1025e457ce1.png)
+______
+![image](https://user-images.githubusercontent.com/89204620/176140960-bdcb7f20-28f9-49af-95cb-0c50a344b4f2.png)
+______
+![image](https://user-images.githubusercontent.com/89204620/176141030-7681020d-0221-4cf7-98d3-97f2ef79e351.png)
+______
+![image](https://user-images.githubusercontent.com/89204620/176141300-d9c74eb1-c922-410f-a239-876470a385e1.png)
+ ______
+![image](https://user-images.githubusercontent.com/89204620/176141379-c186b695-ebbd-4039-8a81-bac134c5d868.png)
