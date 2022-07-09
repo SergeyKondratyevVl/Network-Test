@@ -62,7 +62,7 @@ class UserCreationForm(forms.ModelForm):
         return user
 
 @admin.register(UserNet)
-class UserNetAdmin(BaseUserAdmin):
+class UserNetAdmin(admin.ModelAdmin):
     form = UserChangeForm
     add_form = UserCreationForm
     list_display = ('age', 'description', 'telephone', 'email', 'gender', 'time_create',)
